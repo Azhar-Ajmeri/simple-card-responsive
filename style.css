@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+/********************/
+/*Custom Properties*/
+/******************/
+:root{
+    /*colors*/
+    --clr-bright-orange: hsl(31, 77%, 52%);
+    --clr-dark-cyan: hsl(184, 100%, 22%);
+    --clr-very-dark-cyan: hsl(179, 100%, 13%);
+
+    --clr-light-grey: hsl(0, 0%, 95%);
+
+    --clr-transparent-white: hsla(0, 0%, 100%, 0.75);
+}
+
+/********************/
+/*      Reset      */
+/******************/
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    min-height: 100vh;
+}
+
+/********************/
+/* Utility Classes */
+/******************/
+
+.container{
+    padding-top: 8vh;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* colors */
+
+.bg-orange{
+    background-color: var(--clr-bright-orange);
+}
+
+.bg-dark-cyan{
+    background-color: var(--clr-dark-cyan);
+}
+
+.bg-darker-cyan{
+    background-color: var(--clr-very-dark-cyan);
+}
+
+.bg-light{
+    background-color: var(--clr-light-grey);
+}
+
+/* typography */
+.fc-Transparent-white{
+    color: var(--clr-transparent-white);
+}
+
+.fc-light{
+    color: var(--clr-light-grey);
+}
+
+.fc-orange{
+    color: var(--clr-bright-orange);
+}
+
+.fc-dark-cyan{
+    color: var(--clr-dark-cyan);
+}
+
+.fc-darker-cyan{
+    color: var(--clr-very-dark-cyan);
+}
+
+.ff-lexend-deca{
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.ff-big-shoulders{
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+
+/**********************/
+/*     Components    */
+/********************/
+
+/* Cards */
+.card{
+    max-width: 18.8rem;
+    padding: 2.3rem;
+    line-height: 1.8rem;
+}
+
+.card:first-child{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.card:last-child{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.card-title{
+    font-size: 2.5rem;
+    margin-block: 2rem;
+}
+
+.card-body{
+    font-size: 0.9375rem;
+    margin-bottom: 5rem;
+}
+
+/* Button */
+.btn{
+    border: none;
+    padding-block: 0.8rem;
+    padding-inline: 1.6rem;
+    border-radius: 50px;
+    transition: 1s;
+}
+
+.btn:hover, :focus{
+    background-color: transparent;
+    outline: 2px solid white;
+    color: var(--clr-light-grey)
+}
+
+@media (max-width: 48em) {
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card:first-child{
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 10px;
+    }
+    
+    .card:last-child{
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
